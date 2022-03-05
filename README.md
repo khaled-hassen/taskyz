@@ -4,6 +4,7 @@ This is a customizable TODO web app made with:
 * Apollo GraphQL
 * React + TailwindCSS + styled-components
 * NodeJs + ExpressJS
+
 [Demo](https://taskyz.netlify.app/)
 
 ## Getting Started

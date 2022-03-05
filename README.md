@@ -47,6 +47,8 @@ npm run dev
 # or
 yarn dev
 ```
+The api will be on [http://localhost:5000](http://localhost:5000)
+
 5. setup the client
 ```bash
 # dir: taskyz/client
@@ -54,8 +56,6 @@ npm install
 # or
 yarn install
 ```
-The api will be on [http://localhost:5000](http://localhost:5000)
-
 6. add environment variables
 ```bash
 # dir: taskyz/client

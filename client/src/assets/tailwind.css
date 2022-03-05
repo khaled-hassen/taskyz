@@ -1,0 +1,142 @@
+/* purgecss start ignore */
+@tailwind base;
+/* purgecss end ignore */
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --lightness: 5%;
+
+        --default-bg-color: 0, 0%, 20%;
+        --default-card-bg-color: 0, 0%, 15%;
+        --default-text-color: 0, 0%, 100%;
+        --default-primary-color-hs: 221, 83%;
+        --default-primary-color-l: 53%;
+        --default-primary-color: var(--default-primary-color-hs), var(--default-primary-color-l);
+        --default-light-primary-color: var(--default-primary-color-hs), calc(var(--default-primary-color-l) + var(--lightness));
+        --default-success-color-hs: 161, 94%;
+        --default-success-color-l: 30%;
+        --default-success-color: var(--default-success-color-hs), var(--default-success-color-l);
+        --default-light-success-color: var(--default-success-color-hs), calc(var(--default-success-color-l) + var(--lightness));
+        --default-warning-color: 43, 96%, 56%;
+        --default-danger-color-hs: 0, 72%;
+        --default-danger-color-l: 51%;
+        --default-danger-color: var(--default-danger-color-hs), var(--default-danger-color-l);
+        --default-light-danger-color: var(--default-danger-color-hs), calc(var(--default-danger-color-l) + var(--lightness));
+        --default-bg-opacity: 0.4;
+        --default-blur: 1.25rem;
+
+        --bg-color: 0, 0%, 20%;
+        --card-bg-color: 0, 0%, 15%;
+        --text-color: 0, 0%, 100%;
+        --primary-color-hs: 221, 83%;
+        --primary-color-l: 53%;
+        --primary-color: var(--primary-color-hs), var(--primary-color-l);
+        --light-primary-color: var(--primary-color-hs), calc(var(--primary-color-l) + var(--lightness));
+        --success-color-hs: 161, 94%;
+        --success-color-l: 30%;
+        --success-color: var(--success-color-hs), var(--success-color-l);
+        --light-success-color: var(--success-color-hs), calc(var(--success-color-l) + var(--lightness));
+        --warning-color: 43, 96%, 56%;
+        --danger-color-hs: 0, 72%;
+        --danger-color-l: 51%;
+        --danger-color: var(--danger-color-hs), var(--danger-color-l);
+        --light-danger-color: var(--danger-color-hs), calc(var(--danger-color-l) + var(--lightness));
+        --bg-opacity: 0.4;
+        --blur: 1.25rem;
+
+        --transition-duration: 300ms;
+        --transition-delay: 100ms;
+        --order: 0; /* used for cascade animation */
+    }
+
+    html {
+        background-color: hsl(var(--bg-color));
+    }
+
+    html, body {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    * {
+        color: hsl(var(--text-color));
+    }
+
+    .fade-enter {
+        opacity: 0;
+    }
+
+    .fade-enter-active {
+        opacity: 1;
+    }
+
+    .fade-exit {
+        opacity: 1;
+    }
+
+    .fade-exit-active {
+        opacity: 0;
+    }
+
+    .fade-enter-active,
+    .fade-exit-active {
+        transition: opacity var(--transition-duration);
+    }
+
+    .fade-zoom-enter {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    .fade-zoom-enter-active {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .fade-zoom-exit {
+        opacity: 1;
+    }
+
+    .fade-zoom-exit-active {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    .fade-zoom-enter-active,
+    .fade-zoom-exit-active {
+        transition: opacity var(--transition-duration), transform var(--transition-duration);
+        transition-delay: calc(var(--order) * var(--transition-delay));
+    }
+
+    .slide-up-animation {
+        animation: slide-up var(--transition-duration) forwards;
+    }
+
+    @keyframes slide-up {
+        0% {
+            transform: translateY(100%);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    ::-webkit-scrollbar {
+        width: 7px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: hsla(var(--text-color), 0.3);
+        border-radius: 99999px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: hsla(var(--text-color), 0.6);
+    }
+}

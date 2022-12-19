@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "./build/bundle.js",
   "license": "MIT",
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "start": "node ./build/bundle.js",
     "dev": "nodemon ./src/server.ts",

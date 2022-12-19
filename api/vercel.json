@@ -1,3 +1,10 @@
 {
-    "rewrites": [{ "source": "/src/(.*)", "destination": "/build" }]
-}
+    "version": 2,
+    "name": "taskyz-api",
+    "builds": [
+       { "src": "./build/bundle.js", "use": "@vercel/node" }
+    ],
+    "routes": [
+       { "src": "/(.*)", "dest": "/" }
+    ]
+ }

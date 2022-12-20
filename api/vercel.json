@@ -1,0 +1,18 @@
+{
+   "version": 2,
+   "builds": [
+      {
+         "src": "build/bundle.js",
+         "use": "@vercel/node",
+         "includeFiles": [
+            "build/**"
+         ]
+      }
+   ],
+   "routes": [
+      {
+         "src": "/(.*)",
+         "dest": "build/bundle.js"
+      }
+   ]
+}

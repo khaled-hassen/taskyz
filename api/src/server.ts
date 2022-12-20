@@ -33,9 +33,10 @@ const server = new ApolloServer({
     return { ...ctx, user };
   },
   playground:
-    process.env.NODE_ENV === "production"
-      ? false
-      : { settings: { "request.credentials": "include" } },
+    true,
+    // process.env.NODE_ENV === "production"
+    //   ? false
+    //   : { settings: { "request.credentials": "include" } },
   introspection: process.env.NODE_ENV !== "production",
 });
 const clientUrl = process.env.CLIENT;

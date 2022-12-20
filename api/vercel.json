@@ -4,9 +4,11 @@
       {
          "src": "build/bundle.js",
          "use": "@vercel/node",
-         "includeFiles": [
-            "build/**"
-         ]
+         "config": {
+            "includeFiles": [
+               "build/**"
+            ]
+         }
       }
    ],
    "routes": [
